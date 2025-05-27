@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ことわざパズルwithココアちゃん</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>ことわざパズルwithココアちゃん</h1>
+        
+        <!-- タイトル画面 -->
+        <div class="title-screen">
+            <div class="title-content">
+                <h2>ことわざパズル</h2>
+                <p>画像のテーマを表すことわざを並べ替えよう！</p>
+                <button id="start-title">ゲームを開始する</button>
+            </div>
+        </div>
+        
+        
+        <!-- ゲーム画面 -->
+        <div class="game-area" style="display: none;">
+            <h2>パズルを解こう！</h2>
+            <div class="game-info">
+                <p>画像のテーマを表す言葉に並べ替えてください</p>
+            </div>
+            
+            <div class="game-content">
+                <div class="image-side">
+                    <div class="image-container small">
+                        <img id="game-image" src="" alt="テーマ画像" width="400" height="400">
+                    </div>
+                </div>
+                
+                <!-- ドラッグアンドドロップエリア -->
+                <div class="puzzle-side">
+                    <div class="letters-container">
+                        <h3>文字を並べ替えてください：</h3>
+                        <div id="letters-source" class="letters-source"></div>
+                    </div>
+                    
+                    <div class="answer-container">
+                        <h3>あなたの答え：</h3>
+                        <div id="answer-drop-area" class="answer-drop-area"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="game-controls">
+                <div class="primary-controls">
+                    <button id="reset-game">リセット</button>
+                    <button class="answer-button" id="check-answer">答え合わせ</button>
+                </div>
+                <button id="next-image">次の問題</button>
+                <button id="hint-button" class="hint-button">ヒント</button>
+            </div>
+            
+            <div id="result-message" class="result"></div>
+        </div>
+        
+        <!-- 確認ダイアログ -->
+        <div id="confirm-dialog" class="modal">
+            <div class="modal-content">
+                <p>この問題をスキップしてよろしいですか？</p>
+                <div class="modal-buttons">
+                    <button id="confirm-yes">はい</button>
+                    <button id="confirm-no">いいえ</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- ヒントダイアログ -->
+        <div id="hint-dialog" class="modal">
+            <div class="modal-content">
+                <p id="hint-message">ヒントメッセージ</p>
+                <div class="modal-buttons">
+                    <button id="hint-close">閉じる</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- ことわざ解説ダイアログ -->
+        <div id="explanation-dialog" class="modal">
+            <div class="modal-content explanation-modal">
+                <h3 id="explanation-title">ことわざ解説</h3>
+                <div class="explanation-tabs">
+                    <button class="tab-button active" data-tab="meaning">意味</button>
+                    <button class="tab-button" data-tab="origin">由来</button>
+                    <button class="tab-button" data-tab="example">例文</button>
+                </div>
+                <div class="explanation-content">
+                    <div id="meaning-content" class="tab-content active">
+                        <p id="meaning-text"></p>
+                    </div>
+                    <div id="origin-content" class="tab-content">
+                        <p id="origin-text"></p>
+                    </div>
+                    <div id="example-content" class="tab-content">
+                        <p id="example-text"></p>
+                    </div>
+                </div>
+                <div class="modal-buttons">
+                    <button id="explanation-close" class="next-button">次の問題へ</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- パーティクル用キャンバス -->
+        <canvas id="particle-canvas"></canvas>
+    </div>
+    
+    <script src="image-data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
