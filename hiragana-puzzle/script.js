@@ -73,8 +73,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // 次の画像に切り替える関数
     function nextImage() {
         currentImageIndex = (currentImageIndex + 1) % shuffledImageSets.length;
-        isCurrentPuzzleSolved = false; // 新しい問題に切り替えたらリセット
+        isCurrentPuzzleSolved = false; 
         startGame();
+        scrollToTop(); 
     }
     
     // ドロップインジケータを削除する共通関数
@@ -334,7 +335,31 @@ document.addEventListener('DOMContentLoaded', function() {
         resultMessage.textContent = '';
         resultMessage.className = 'result';
     }
-    
+
+    function scrollToTop() {
+    if (document.activeElement && typeof document.activeElement.blur === 'function') {
+        document.activeElement.blur();
+    }
+
+    const root = document.scrollingElement || document.documentElement;
+
+    // レイアウト確定後にスクロール
+    requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+        if (root.scrollTo) {
+            root.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+        } else {
+            root.scrollTop = 0;
+            document.body.scrollTop = 0; 
+        }
+        setTimeout(() => {
+            root.scrollTop = 0;
+            document.body.scrollTop = 0;
+        }, 0);
+        });
+    });
+    }
+        
     // イベントリスナーの設定
     startTitleButton.addEventListener('click', startFromTitle);
     
