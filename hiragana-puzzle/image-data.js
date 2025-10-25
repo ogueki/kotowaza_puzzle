@@ -99,6 +99,24 @@ const imageSets = [
             origin: '昔から良薬は苦味があることが多く、そこから人生の教訓として使われるようになりました。',
             example: '「先生の厳しい指導は良薬は口に苦しで君のためだよ」のように使います。'
         }
+    },
+    {
+        imagePath: 'images/dongurinoseikurabe.png',
+        text: 'どんぐりのせいくらべ',
+        explanation: {
+            meaning: 'どれも代わり映えのしない、ぱっとしない者同士が競い合っている様子という意味のことわざです。',
+            origin: '',
+            example: ''
+        }
+    },
+    {
+        imagePath: 'images/isinouenimosannen.png',
+        text: 'いしのうえにもさんねん',
+        explanation: {
+            meaning: '苦しみにたえれば、いずれ報われるという意味のことわざです。',
+            origin: '',
+            example: ''
+        }
     }
     // ↑↑↑ 新しい画像を追加する場合は、上記のように追加してください ↑↑↑
     // 例: { imagePath: 'images/新しい画像ファイル名.png', text: '対応するひらがな', explanation: { meaning: '意味', origin: '由来', example: '例文' } }
