@@ -117,6 +117,51 @@ const imageSets = [
             origin: '',
             example: ''
         }
+    },
+    {
+        imagePath: 'images/oninikanabou.png',
+        text: 'おににかなぼう',
+        explanation: {
+            meaning: '強い者がさらによい条件でますます強くなること。',
+            origin: '',
+            example: ''
+        }
+    },
+    {
+        imagePath: 'images/sonaearebaureinasi.png',
+        text: 'そなえあればうれいなし',
+        explanation: {
+            meaning: 'ふだんから準備しておけば、いざというときに困らないということ。',
+            origin: '',
+            example: ''
+        }
+    },
+    {
+        imagePath: 'images/kahouhanetemate.png',
+        text: 'かほうはねてまて',
+        explanation: {
+            meaning: '幸福の訪れは人間の力ではどうすることもできないから、焦らずに時機を待てという意味のことわざです。',
+            origin: '',
+            example: ''
+        }
+    },
+    {
+        imagePath: 'images/tanakarabotamoti.png',
+        text: 'たなからぼたもち',
+        explanation: {
+            meaning: '思いがけない幸運が転がりこむこと。',
+            origin: '',
+            example: ''
+        }
+    },
+    {
+        imagePath: 'images/sarumokikaraotiru.png',
+        text: 'さるもきからおちる',
+        explanation: {
+            meaning: 'その道の名人と言われる人でも、時には失敗するということ。',
+            origin: '',
+            example: ''
+        }
     }
     // ↑↑↑ 新しい画像を追加する場合は、上記のように追加してください ↑↑↑
     // 例: { imagePath: 'images/新しい画像ファイル名.png', text: '対応するひらがな', explanation: { meaning: '意味', origin: '由来', example: '例文' } }
