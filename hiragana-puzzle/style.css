@@ -552,6 +552,15 @@ button:active {
     box-shadow: var(--hover-shadow);
 }
 
+/* ダブルタップで拡大を防ぐ */
+button,
+a,
+.tab-button,
+.hint-button,
+.control-button {
+  touch-action: manipulation; 
+}
+
 /* ことわざ解説モーダルのスタイル */
 .explanation-modal {
     max-width: 600px;
