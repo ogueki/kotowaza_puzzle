@@ -226,8 +226,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // 注: この関数は未使用のため削除
-    
     // 現在の回答を取得する関数
     function getCurrentAnswer() {
         const letterItems = answerDropArea.querySelectorAll('.letter-item');
@@ -436,8 +434,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const explanationDialog = document.getElementById('explanation-dialog');
     const explanationTitle = document.getElementById('explanation-title');
     const meaningText = document.getElementById('meaning-text');
-    const originText = document.getElementById('origin-text');
-    const exampleText = document.getElementById('example-text');
     const explanationCloseButton = document.getElementById('explanation-close');
     const tabButtons = document.querySelectorAll('.tab-button');
     const tabContents = document.querySelectorAll('.tab-content');
@@ -446,8 +442,6 @@ document.addEventListener('DOMContentLoaded', function() {
     function showExplanationDialog(imageSet) {
         explanationTitle.textContent = `「${imageSet.text}」の解説`;
         meaningText.textContent = imageSet.explanation.meaning;
-        originText.textContent = imageSet.explanation.origin;
-        exampleText.textContent = imageSet.explanation.example;
         
         // 最初のタブ（意味）をアクティブにする
         tabButtons.forEach(btn => btn.classList.remove('active'));
