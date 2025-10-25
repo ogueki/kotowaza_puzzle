@@ -19,7 +19,7 @@ const imageSets = [
         imagePath: 'images/tanukineiri.png',
         text: 'たぬきねいり',
         explanation: {
-            meaning: '狸が寝たふりをすること。ずる賢く人を騙すことや、知らないふりをすることを表します。'
+            meaning: '眠っているふりをすること。空寝。'
         }
     },
     {
@@ -47,7 +47,7 @@ const imageSets = [
         imagePath: 'images/hetanateltupoukazuutyaataru.png',
         text: 'へたなてっぽうかずうちゃあたる',
         explanation: {
-            meaning: '下手でも数多く試せば、いつかは成功する。継続は力なりという意味のことわざです。'
+            meaning: '下手でも数多く試せば、いつかは成功する。という意味のことわざです。'
         }
     },
     {

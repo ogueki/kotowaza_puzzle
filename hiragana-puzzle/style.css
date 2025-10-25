@@ -783,4 +783,8 @@ button:active {
         padding: 12px 25px;
         min-width: 150px;
     }
+
+    .hint-button {
+        bottom: 0;
+    }
 }
